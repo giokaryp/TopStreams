@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_myStreams" android:icon="@drawable/ic_my_streams" android:title="My Streams"/>
+        <item android:id="@+id/nav_topStreams" android:icon="@drawable/ic_streams" android:title="Top Streams"/>
+        <item android:id="@+id/nav_topGames" android:icon="@drawable/ic_games" android:title="Top Games"/>
+    </group>
+
+    <item android:title="Account">
+
+        <menu>
+            <item android:id="@+id/nav_logout"  android:title="Log Out"/>
+        </menu>
+
+    </item>
+
+
+
+</menu>

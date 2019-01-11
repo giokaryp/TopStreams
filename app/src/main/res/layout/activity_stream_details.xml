@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundList"
+    tools:context="uom.gr.topstreams.StreamDetailsActivity">
+
+    <ImageView
+        android:id="@+id/bannerImageView"
+        android:layout_width="0dp"
+        android:layout_height="112dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/streamerInfoBar"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:alpha="0.8"
+        android:fadingEdge="none"
+        android:scaleType="fitXY"
+        android:tint="@color/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bannerImageView"
+        app:srcCompat="@android:drawable/bottom_bar" />
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="@+id/streamerInfoBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/streamerInfoBar"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/gameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:clickable="true"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/hyperlink"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/gametxt"
+        app:layout_constraintStart_toEndOf="@+id/gametxt" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/logoImageView"
+        app:layout_constraintTop_toTopOf="@+id/streamerInfoBar" />
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="TextView"
+        android:textColor="@color/text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/streamerInfoBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logoImageView"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+    <TextView
+        android:id="@+id/viewersTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="TextView"
+        android:textAlignment="textEnd"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/viewstxt"
+        app:layout_constraintStart_toEndOf="@+id/viewstxt" />
+
+    <TextView
+        android:id="@+id/gametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Game:"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/streamerInfoBar" />
+
+    <TextView
+        android:id="@+id/viewstxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Views:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gametxt" />
+
+    <TextView
+        android:id="@+id/followstxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Followers:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewstxt" />
+
+    <TextView
+        android:id="@+id/followsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="TextView"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/followstxt"
+        app:layout_constraintStart_toEndOf="@+id/followstxt" />
+
+    <TextView
+        android:id="@+id/totalviewstxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Total Views:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/followstxt" />
+
+    <TextView
+        android:id="@+id/totalViewsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="TextView"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/totalviewstxt"
+        app:layout_constraintStart_toEndOf="@+id/totalviewstxt" />
+
+    <TextView
+        android:id="@+id/delaytxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Delay:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalviewstxt" />
+
+    <TextView
+        android:id="@+id/delayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="TextView"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/delaytxt"
+        app:layout_constraintStart_toEndOf="@+id/delaytxt" />
+
+    <TextView
+        android:id="@+id/avgfpstxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Average FPS:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delaytxt" />
+
+    <TextView
+        android:id="@+id/avgFpsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="TextView"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/avgfpstxt"
+        app:layout_constraintStart_toEndOf="@+id/avgfpstxt" />
+
+    <TextView
+        android:id="@+id/livetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Live"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toStartOf="@+id/liveimg"
+        app:layout_constraintTop_toTopOf="@+id/streamerInfoBar" />
+
+    <ImageView
+        android:id="@+id/liveimg"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        android:tint="?attr/colorError"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/streamerInfoBar"
+        app:srcCompat="@android:drawable/radiobutton_off_background" />
+
+    <Button
+        android:id="@+id/watchButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/button"
+        android:text="watch live"
+        app:layout_constraintBaseline_toBaselineOf="@+id/viewersTextView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/shareButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/button"
+        android:text="Share"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/watchButton" />
+
+    <TextView
+        android:id="@+id/langtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Language:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avgfpstxt" />
+
+    <TextView
+        android:id="@+id/langTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="TextView"
+        android:textAllCaps="true"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/langtxt"
+        app:layout_constraintStart_toEndOf="@+id/langtxt" />
+
+    <ToggleButton
+        android:id="@+id/followButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="ToggleButton"
+        android:textColorLink="?attr/colorError"
+        android:textOff="Follow"
+        android:textOn="Unfollow"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/streamerInfoBar"
+        app:layout_constraintTop_toTopOf="@+id/bannerImageView" />
+
+</android.support.constraint.ConstraintLayout>
